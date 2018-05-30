@@ -1,0 +1,126 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_LayoutPrincipal.cshtml";
+}
+
+@section styles {    
+    <link href="~/Content/general/vehicle-card.css" rel="stylesheet" />
+    <link href="~/Content/general/product-card.css" rel="stylesheet" />
+    <link href="~/Content/general/service-card.css" rel="stylesheet" />
+    
+    <link href="~/Content/pages/index.css" rel="stylesheet" />
+}
+
+@section scripts {
+    <script src="~/Scripts/pages/vehiculo.js"></script>
+    <script src="~/Scripts/pages/producto.js"></script>
+    <script src="~/Scripts/pages/servicio.js"></script>
+
+}
+
+@*@section navbar {
+    <nav id="navheader" class="navheader">
+
+        <div class="logo">LOGO</div>
+
+        <div class="logo-bar-right">
+            <div id="hamburgerIcon" class="hamburger-icon">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div id="navheaderLinks" class="navheader-links">
+                <button class="navheader-link moveToSection" data-section="vehiculos">Vehículos</button>
+                <button class="navheader-link moveToSection" data-section="productos">Productos</button>
+                <button class="navheader-link moveToSection" data-section="servicios">Servicios</button>
+                <button class="navheader-link moveToSection" data-section="test-drive">Test-Drive</button>
+            </div>
+        </div>
+    </nav>
+}*@
+
+<div class="seccion sliders">
+    <div class="slider slider-one">
+
+        <div class="slider-image-container">
+            <img class="slider-image" src="~/Images/Slider/slider-one.png" alt="">
+        </div>
+
+        <div class="slider-message">
+            <span class="slider-title">¿Necesitas un vehículo nuevo?</span>
+            <p class="slider-text">Conoce los nuevos vehículos económicos aquí</p>
+
+            <button>Ver más</button>
+        </div>
+
+    </div>
+
+    <div class="slider slider-two">
+
+    </div>
+
+    <div class="slider slider-three">
+
+        <div class="slider-message">
+            <span class="slider-title">Nuevo</span>
+            <p class="slider-text">Experimenta el nuevo RAV4 2018 para todos los terrenos</p>
+
+            <button>Ver más</button>
+        </div>
+
+        <div class="slider-image-container">
+            <img class="slider-image" src="~/Images/Slider/slider-three.png" alt="">
+        </div>
+
+    </div>
+</div>
+
+
+<div id="vehiculos" class="seccion vehiculos flex-center">
+    <!-- <h2 class="seccion-titulo"></h2> -->
+    @*<div class="seccion-titulo">Vehículos</div>*@
+
+    <div class="vehiculos-catalogo">
+        <div id="btnPreviousVehicleCard" class="btnMoveCards"><</div>
+
+        <div class="vehicle-card-container"></div>
+
+        <div id="btnNextVehicleCard" class="btnMoveCards">></div>
+    </div>
+</div>
+
+<div id="productos" class="seccion productos flex-center">
+    <!-- <h2 class="seccion-titulo"></h2> -->
+    <div class="seccion-cabecera">
+        <div class="seccion-titulo">Productos</div>
+
+        <a href="vermas.html">Ver todos los productos</a>
+    </div>
+
+    <div class="product-card-container"></div>
+</div>
+
+<div id="servicios" class="seccion servicios flex-center">
+    <div class="seccion-cabecera">
+        <div class="seccion-titulo">Servicios</div>
+
+        <a href="vermasservicios.html">Ver todos los servicios</a>
+    </div>
+
+    <div class="service-card-container"></div>
+</div>
+
+<div id="test-drive" class="seccion test-drive">
+    <div class="formulario-corto formulario-corto--transparente">
+        <div class="seccion-titulo">Pide tu Test-Drive!</div>
+        <div class="test-drive-formulario">
+            <p>¿Deseas probar uno de nuestros vehículos? ¡Qué esperas!</p>
+
+            <button>Pedir</button>
+        </div>
+    </div>
+</div>
+
+
+

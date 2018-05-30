@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Mi aplicación ASP.NET</title>
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="~/Content/toastr.css" rel="stylesheet"/>
+    <link href="~/Content/general.css" rel="stylesheet" />
+    <link href="~/Content/general/navegador.css" rel="stylesheet" />
+
+    @RenderSection("styles", required: false)
+
+</head>
+<body>
+    
+    @Html.Partial("~/Views/Shared/_Navegador.cshtml")
+    
+    @*@RenderSection("navbar", required: false)*@
+
+    @RenderBody()
+        @*<div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p>&copy; @DateTime.Now.Year - Mi aplicación ASP.NET</p>
+            </footer>
+        </div>*@
+
+    <footer>
+        <div class="footer-info">
+            <div class="footer-column">
+                <span class="footer-column-title">Conócenos</span>
+
+                <span>Historia</span>
+                <span>Qué hacemos</span>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-column-title">Nuestros vehículos</span>
+
+                <span>Honda</span>
+                <span>Dogde</span>
+                <span>Mitsubishi</span>
+                <span>Chevrolet</span>
+                <span>Toyota</span>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-column-title">Contáctanos</span>
+
+                <span>78002780</span>
+                <span>eCommerceCar@gmail.com</span>
+
+                <span class="footer-column-title">Nuestras redes sociales</span>
+
+                <span>Facebook</span>
+                <span>Twitter</span>
+                <span>Instagram</span>
+                <span>Snapchat</span>
+                <span>Google+</span>
+                <span>Youtube</span>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-column-title">¿Necesitas Ayuda?</span>
+
+                <span>Cómo me registro</span>
+                <span>No puedo comprar</span>
+                <span>Quiero reunirme con un asesor</span>
+                <span>Quiero hacer un Test-Drive</span>
+            </div>
+        </div>
+
+        <div class="footer-copyright">
+            Copyright © 2018 eCommerceCar Inc. Todos los derechos reservados.
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @*@Scripts.Render("~/bundles/bootstrap")*@
+    
+    <script src="~/Scripts/toastr.js"></script>
+    <script src="~/Scripts/Generico.js"></script>
+    <script src="~/Scripts/general.js"></script>
+    <script src="~/Scripts/general/session.js"></script>
+    <script src="~/Scripts/general/login.js"></script>
+    <script src="~/Scripts/general/carrito.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
